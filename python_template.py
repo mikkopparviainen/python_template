@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import matplotlib
 
 
-# Hello world function
+# Hello world code; plots a signal.
 fs = 250
 f = 5
 T = 2
@@ -37,6 +37,7 @@ if __name__ == "__main__":
     print(f"Seaborn version: {sn.__version__}")
     print(f"Pandas version: {pd.__version__}")
     print(f"Matplotlib version: {matplotlib.__version__}")
+    # Generate signal and plot it
     s, t = pp(f,T,fs)
     plt.plot(t, s, 'o-')
     plt.show()
