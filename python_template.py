@@ -30,7 +30,7 @@ def pp(f, T, fs):
 
 
 if __name__ == "__main__":
-    # print version information of python and imported packages
+    # print version information of python and imported packages.
     print(f"Python version: {sys.version}")
     print(f"Pytorch version: {torch.__version__}")
     print(f"Numpy version: {np.__version__}")
