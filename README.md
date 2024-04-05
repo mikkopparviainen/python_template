@@ -4,7 +4,7 @@ A template for a python project.
 
 ## What's included
 
-- `requirements.txt``
+- `requirements.txt`
 - [`python_template.py`](python_template.py)
 
 ## Usage example
@@ -16,8 +16,8 @@ A template for a python project.
 
 ### Tests
 
-TODO
+N/A
 
 ### Automated testing
 
-TODO
+N/A
