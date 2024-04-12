@@ -1,5 +1,6 @@
 import torch
 import sys
+import argparse
 
 import seaborn as sn
 import pandas as pd
@@ -30,6 +31,14 @@ def pp(f, T, fs):
 
 
 if __name__ == "__main__":
+    """
+    A simple template code for a python project.
+    """
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-o', dest='filename', help='output filename', type=str, required=False)
+    args = parser.parse_args()
+
     # print version information of python and imported packages.
     print(f"Python version: {sys.version}")
     print(f"Pytorch version: {torch.__version__}")
@@ -40,4 +49,5 @@ if __name__ == "__main__":
     # Generate signal and plot it
     s, t = pp(f,T,fs)
     plt.plot(t, s, 'o-')
-    plt.show()
+    if args.filename:
+        plt.savefig("python_template.png")
