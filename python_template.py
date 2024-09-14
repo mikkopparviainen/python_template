@@ -46,6 +46,10 @@ if __name__ == "__main__":
     print(f"Seaborn version: {sn.__version__}")
     print(f"Pandas version: {pd.__version__}")
     print(f"Matplotlib version: {matplotlib.__version__}")
+
+    # Check whether cuda os avalable
+    print(f"torch.cuda.is_available(): {torch.cuda.is_available()}")
+
     # Generate signal and plot it
     s, t = pp(f,T,fs)
     plt.plot(t, s, 'o-')
