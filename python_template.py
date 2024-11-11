@@ -7,7 +7,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
-
+from sympy.physics.quantum.matrixutils import numpy_ndarray
 
 # Hello world code; plots a signal.
 fs = 250
@@ -15,7 +15,7 @@ f = 5
 T = 2
 
 
-def pp(f, T, fs):
+def pp(f: float, T: float, fs: float | int) -> tuple[numpy_ndarray, numpy_ndarray]:
     """
 
     :param f: the frequency of a signal
@@ -47,8 +47,10 @@ if __name__ == "__main__":
     print(f"Pandas version: {pd.__version__}")
     print(f"Matplotlib version: {matplotlib.__version__}")
 
-    # Check whether cuda os avalable
+    # Check whether cuda is available
     print(f"torch.cuda.is_available(): {torch.cuda.is_available()}")
+    # Check whether mps (mac gpu) is available
+    print(f"torch.mps.is_available(): {torch.mps.is_available()}")
 
     # Generate signal and plot it
     s, t = pp(f,T,fs)
